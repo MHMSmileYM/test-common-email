@@ -95,4 +95,14 @@ public class EmailTest {
 		assertNotNull(email.getMailSession());
 	}
 	
+	@Test
+	public void testGetSentDate() throws Exception{
+		email.setSentDate(null);
+		email.getSentDate();
+		assertNotNull(email.sentDate);
+		email.setSentDate(new Date());
+		email.getSentDate();
+		assertNotNull(email.sentDate);
+	}
+	
 }
