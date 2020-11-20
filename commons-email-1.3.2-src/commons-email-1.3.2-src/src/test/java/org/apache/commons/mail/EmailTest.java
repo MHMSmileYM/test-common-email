@@ -111,4 +111,9 @@ public class EmailTest {
 		assertNotNull(email.socketConnectionTimeout);
 	}
 	
+	@Test
+	public void testSetFrom() throws Exception{
+		email.setFrom(TEST_EMAIL);
+		assertNotNull(email.fromAddress);
+	
 }
