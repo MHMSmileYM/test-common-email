@@ -37,3 +37,11 @@ public class EmailTest {
 		email.addBcc(TEST_NULL);
 		assertEquals(0, email.getBccAddresses().size());
 	}
+	
+	@Test
+	public void testAddCc() throws Exception{
+		email.addCc(TEST_EMAILS);
+		assertEquals(3, email.getCcAddresses().size());
+		email.addCc(TEST_NULL);
+		assertEquals(0, email.getCcAddresses().size());
+	}
