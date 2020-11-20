@@ -66,4 +66,14 @@ public class EmailTest {
 		assertEquals(3, email.replyList.size());
 	
 	}
+	
+	@Test
+	public void testBuildMimeMessage() throws Exception{
+		email.setHostName(TEST_NAME);
+		email.setFrom(TEST_EMAIL);
+		email.setSubject (TEST_SUBJECT);
+		email.setCharset("US-ASCII");
+		email.buildMimeMessage();
+	}
+	
 }
