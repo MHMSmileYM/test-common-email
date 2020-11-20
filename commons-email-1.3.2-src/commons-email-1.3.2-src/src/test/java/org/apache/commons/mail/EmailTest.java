@@ -86,4 +86,13 @@ public class EmailTest {
 		assertNotNull(email.getHostName());
 	}
 	
+	@Test
+	public void testGetMailSession() throws Exception{
+		email.getMailSession();
+		email.isSSLOnConnect();
+		email.isStartTLSEnabled();
+		email.isSSLCheckServerIdentity();
+		assertNotNull(email.getMailSession());
+	}
+	
 }
