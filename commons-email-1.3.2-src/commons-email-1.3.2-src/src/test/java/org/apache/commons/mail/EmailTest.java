@@ -105,4 +105,10 @@ public class EmailTest {
 		assertNotNull(email.sentDate);
 	}
 	
+	@Test
+	public void testGetSocetConnectionTimeout() throws Exception{
+		email.getSocketConnectionTimeout();
+		assertNotNull(email.socketConnectionTimeout);
+	}
+	
 }
